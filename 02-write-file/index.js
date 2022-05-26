@@ -5,7 +5,7 @@ const output = fs.createWriteStream('02-write-file/description.txt');
 stdout.write('write anything\n');
 
 stdin.on('data', (data) => {
-	if (data.toString == 'exit\r\n') {
+	if (data.toString() == 'exit\r\n') {
 		process.exit();
 	}
 	if (
